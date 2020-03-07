@@ -1,0 +1,15 @@
+#配置端口
+server:
+  port: 8084
+#rabbitMQ配置
+spring:
+  rabbitmq:
+    port: 5672
+    username: guest
+    password: guest
+    host: 127.0.0.1
+    virtual-host: /
+#配置其它，这些是自定义的，方便之后使用
+mq:
+  fanout:
+    exchangName: order.fanout.ex

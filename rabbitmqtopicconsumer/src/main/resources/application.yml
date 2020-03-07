@@ -1,0 +1,19 @@
+#服务端口
+server:
+  port: 8089
+#配置rabbitMQ
+spring:
+  rabbitmq:
+    port: 5672
+    username: guest
+    password: guest
+    virtual-host: /
+    host: 127.0.0.1
+#自定义
+mq:
+  topic:
+    exchangName: linux.topic
+    qq: #日志队列
+      queue: linux.topic.qq.queue #C1队列
+    wx:
+      queue: linux.topic.wx.queue #C3队列

@@ -1,0 +1,19 @@
+#服务端口
+server:
+  port: 8085
+#配置rabbitMQ
+spring:
+  rabbitmq:
+    virtual-host: /
+    port: 5672
+    username: guest
+    password: guest
+    host: 127.0.0.1
+#自定义参数
+mq:
+  fanout:
+    exchangName: order.fanout.ex #交换机
+    log: #日志队列
+      queue: order.fanout.log.queue #C1队列
+    email: #email队列
+      queue: order.fanout.email.queue #C2队列

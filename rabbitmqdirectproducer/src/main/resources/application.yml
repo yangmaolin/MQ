@@ -1,0 +1,15 @@
+#服务端口
+server:
+  port: 8086
+#配置rabbitMQ
+spring:
+  rabbitmq:
+    port: 5672
+    username: guest
+    password: guest
+    host: 127.0.0.1
+    virtual-host: /
+#自定义配置
+mq:
+  direct:
+    exchangName: order.direct.ex

@@ -1,0 +1,21 @@
+#端口配置
+server:
+  port: 8087
+#RabbitMQ配置
+spring:
+  rabbitmq:
+    port: 5672
+    username: guest
+    password: guest
+    host: 127.0.0.1
+    virtual-host: /
+#自定义配置
+mq:
+  direct:
+    exchangName: order.direct.ex
+    log: #日志队列
+      queue: order.direct.log.queue #C1队列
+    email:
+      queue: order.direct.email.queue #C2队列
+    wx:
+      queue: order.direct.wx.queue #C3队列
